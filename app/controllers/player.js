@@ -1,6 +1,8 @@
 import Ember from 'ember';
 
 export default Ember.Controller.extend({
+  model: null,
+
   hasContent: Ember.computed.notEmpty('model'),
 
   playing: false,

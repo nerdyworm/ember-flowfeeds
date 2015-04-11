@@ -26,8 +26,8 @@ export default Ember.Component.extend({
   played: Ember.computed.alias('episode.listened'),
 
   loadedInPlayer: function() {
-    return this.get('player.id') === this.get('episode.id');
-  }.property('player.id', 'episode.id'),
+    return this.get('player.model.id') === this.get('episode.id');
+  }.property('player.model.id', 'episode.id'),
 
   playing: function() {
     return this.get('player.playing') && this.get('loadedInPlayer');
