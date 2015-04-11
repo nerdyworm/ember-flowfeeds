@@ -1,0 +1,12 @@
+<div class="tiny-player">
+  <div class="tiny-progress">
+    <div class="tiny-progress-bar" {{bind-attr style="view.progressStyle"}}></div>
+  </div>
+  <div class="thumb" {{action "playPause"}}>
+    <div class="thumb-overlay">
+      <span {{bind-attr class=":glyphicon playing:glyphicon-pause:glyphicon-play"}}></span>
+    </div>
+    <img {{bind-attr src="model.cover"}}>
+  </div>
+  {{tiny-episode episode=model}}
+</div>

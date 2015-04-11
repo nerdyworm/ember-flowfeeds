@@ -1,0 +1,21 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-4">
+      <div class="thumbnail card">
+        <img {{bind-attr src="cover"}}>
+      </div>
+    </div>
+    <div class="col-md-8">
+      <div class="card">
+        <div class="card-header">
+          <strong>{{title}}</strong>
+        </div>
+        <div class="card-body padded">
+          {{description}}
+        </div>
+      </div>
+
+      {{outlet}}
+    </div>
+  </div>
+</div>

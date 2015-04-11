@@ -1,0 +1,17 @@
+<div class="container episode-details">
+  <div class="row">
+    <div class="col-xs-12 col-md-8">
+      {{episode-card
+        player=controller.player
+        episode=controller.model
+        playTeaser="play"
+        toggleFavorite="toggleFavorite"
+        user=currentUser}}
+      {{listeners-card listens=model.listens}}
+      {{favoriters-card favorites=model.favorites}}
+    </div>
+    <div class="col-xs-12 col-md-4">
+      {{related-card related=model.related}}
+    </div>
+  </div>
+</div>

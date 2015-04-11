@@ -1,0 +1,16 @@
+<div class="card">
+  <div class="card-header">
+    <strong>Related</strong>
+  </div>
+  <div class="card-body">
+    <div class="related-episodes">
+      {{#if related.isPending}}
+        {{app-spinner}}
+      {{else}}
+        {{#each related as |r|}}
+          {{tiny-episode episode=r}}
+        {{/each}}
+      {{/if}}
+    </div>
+  </div>
+</div>

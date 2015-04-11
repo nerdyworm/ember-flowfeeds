@@ -1,0 +1,17 @@
+<div class="card" id="latest-episodes-card">
+  <div class="card-header">
+    <strong>Latest Episodes</strong>
+  </div>
+  <div class="card-body">
+    {{#each controller as |e|}}
+      {{tiny-episode episode=e}}
+    {{else}}
+      {{#unless isPending}}
+        No episodes :(
+      {{/unless}}
+    {{/each}}
+  </div>
+</div>
+<div class="padded text-center">
+  {{partial 'newer-older-buttons'}}
+</div>

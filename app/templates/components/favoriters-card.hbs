@@ -1,0 +1,22 @@
+<div class="card">
+  <div class="card-header">
+    <strong>Favorited By</strong>
+  </div>
+  <div class="card-body">
+    <div class="listeners">
+      {{#if favorites.isPending}}
+        {{app-spinner}}
+      {{else}}
+        {{#each favorites as |f|}}
+        <div class="listener">
+          <img {{bind-attr src="f.user.avatar"}} class="avatar">
+        </div>
+        {{else}}
+        <div class="padded text-muted text-center">
+          Show this some love.
+        </div>
+        {{/each}}
+      {{/if}}
+    </div>
+  </div>
+</div>

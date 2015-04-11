@@ -1,0 +1,11 @@
+{{#if isPending}}
+  {{app-spinner}}
+{{else}}
+  {{#if isNewerVisible}}
+    <button {{action "newer"}} class="btn btn-default">Newer</button>
+  {{/if}}
+
+  {{#if isOlderVisible}}
+    <button {{action "older"}} class="btn btn-default">Older</button>
+  {{/if}}
+{{/if}}

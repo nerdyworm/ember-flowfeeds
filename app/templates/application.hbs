@@ -1,3 +1,18 @@
-<h2 id='title'>Welcome to Ember.js</h2>
+<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+  <div class="container">
+    {{app-nav user=currentUser signout="signout"}}
 
+    {{#link-to "index" (query-params page=1) class="navbar-brand pull-right"}}
+      Flowfeeds
+    {{/link-to}}
+
+    {{#if currentUser}}
+      <p class="navbar-text pull-right">
+        <img {{bind-attr src="currentUser.avatar"}} class="avatar" style="width: 18px; height: 18px;">
+      </p>
+    {{/if}}
+  </div>
+</div>
 {{outlet}}
+{{render 'player'}}
+{{outlet 'modal'}}

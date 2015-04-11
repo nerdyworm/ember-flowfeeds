@@ -1,0 +1,100 @@
+.card {
+  background: white;
+  border: 1px solid $btn-default-border;
+  margin-bottom: 16px;
+  border-radius: $input-border-radius;
+  overflow: hidden;
+
+  .card-cover {
+    .cover-image {
+      height: 280px;
+    }
+  }
+
+  h1 a {
+    color: $text-color;
+  }
+
+  a h1 {
+    color: $text-color;
+  }
+
+  h1, h2 {
+    font-size: 18px;
+    text-align: center;
+    overflow-x: hidden;
+    white-space: nowrap;
+    margin: 0px;
+    margin-bottom: 5px;
+  }
+
+  h2 {
+    font-size: 12px;
+    color: $text-muted;
+  }
+
+  .badges {
+    line-height: 14px;
+    font-size: 14px;
+    text-align: center;
+    color: #999;
+    margin: 8px 0px;
+
+    > span {
+      display: inline-block;
+      margin: 0px 10px;
+    }
+  }
+
+  .headline {
+    text-align: center;
+    @include text-overflow();
+  }
+
+  .card-header {
+    border-bottom: 1px solid $gray-lighter;
+    padding: 8px;
+  }
+
+  .padded {
+    padding: 8px;
+  }
+
+  .card-actions {
+    border-top: 1px solid $gray-lighter;
+    padding: 8px;
+  }
+}
+
+.episode-card {
+  .card-cover {
+    position: relative;
+
+    .play-button {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin-left: -25px;
+      margin-top: -25px;
+    }
+  }
+}
+
+.episode-card.played {
+  h1, h2, h3 {
+    font-weight: normal;
+    color: $text-muted;
+  }
+}
+
+.listeners {
+  @include clearfix();
+
+  .listener {
+    display: block;
+    width: 70px;
+    height: 70px;
+    padding: 5px;
+    float: left;
+  }
+}

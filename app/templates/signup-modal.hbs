@@ -1,0 +1,21 @@
+<div class="modal fade in" style="display: block">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" {{action "closeModal"}}><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title">Want to save that for later?</h4>
+      </div>
+      <div class="modal-body">
+        <p>Hey Friend!</p>
+        <p>If you want to save favorites you are going to have to sign up!</p>
+        <button {{action "closeModalAndSignUp"}} class="btn btn-success btn-lg">
+          Yes, I want to sign up :)
+        </button>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" {{action "closeModal"}}>Nope</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal-backdrop in"></div>

@@ -5,14 +5,52 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Flowfeeds</title>
     <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
     {{content-for 'head'}}
 
-    <link rel="stylesheet" href="assets/vendor.css">
     <link rel="stylesheet" href="assets/flowfeeds.css">
+    <style>
+      #page-loading .spinner {
+        margin: 100px auto;
+        margin-bottom: 20px;
+      }
+
+      .spinner {
+        width: 33px;
+        height: 33px;
+        background-color: #333;
+        margin: 0px auto;
+
+        border-radius: 100%;
+        -webkit-animation: scaleout 1.0s infinite ease-in-out;
+        animation: scaleout 1.0s infinite ease-in-out;
+      }
+
+      @-webkit-keyframes scaleout {
+        0% { -webkit-transform: scale(0.0) }
+        100% {
+          -webkit-transform: scale(1.0);
+          opacity: 0;
+        }
+      }
+
+      @keyframes scaleout {
+        0% {
+          transform: scale(0.0);
+          -webkit-transform: scale(0.0);
+        } 100% {
+          transform: scale(1.0);
+          -webkit-transform: scale(1.0);
+          opacity: 0;
+        }
+      }
+    </style>
   </head>
   <body>
+    <div id="page-loading">
+      <div class="spinner"></div>
+    </div>
     {{content-for 'body'}}
 
     <script src="assets/vendor.js"></script>

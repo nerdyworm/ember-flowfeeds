@@ -1,0 +1,162 @@
+@import "app/variables";
+@import "bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap";
+@import "components/play-button";
+@import "components/fav-button";
+@import "components/nav";
+@import "components/cards";
+
+body {
+  margin-top: 64px;
+  background: #fafafa;
+  opacity: 1;
+  padding-bottom: 56px;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+.application-view {
+  opacity: 0;
+  -webkit-transition: opacity 500ms ease-in;
+  -moz-transition: opacity 500ms ease-in;
+  -ms-transition: opacity 500ms ease-in;
+  -o-transition: opacity 500ms ease-in;
+  transition: opacity 500ms ease-in;
+}
+
+.application-view.loaded {
+  opacity: 1;
+}
+
+.avatar {
+  border-radius: 100px;
+  width: 100%;
+}
+
+.navbar-toggle {
+  display: block;
+}
+
+.row-collapse {
+  > .col-xs-2, > .col-xs-8 {
+     padding: 0px;
+  }
+}
+
+#player {
+  background: rgba(255,255,255,0.95);
+  position: fixed;
+  bottom: 0px;
+  right: 0px;
+  left: 0px;
+  display: none;
+}
+
+#player.has-content {
+  display: block;
+}
+
+.tiny-episode {
+  display: block;
+  height: 40px;
+  line-height: 20px;
+
+  margin: 8px;
+  margin-bottom: 16px;
+
+  &:last-child {
+    margin-bottom: 8px;
+  }
+
+  color: #555;
+
+  .thumb {
+    float: left;
+    img {
+      width: 40px;
+      height: 40px;
+    }
+  }
+
+  .content {
+    padding-left: 45px;
+  }
+
+  .title, .artist {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+
+  .title {
+    font-weight: bold;
+  }
+
+}
+
+.tiny-player {
+  .thumb {
+    float: left;
+    position: relative;
+
+    .thumb-overlay {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      margin-left: -10px;
+      margin-top: -10px;
+      font-size: 20px;
+      line-height: 20px;
+      width: 20px;
+      height: 20px;
+
+      span {
+        color: #ffffff;
+      }
+    }
+
+    img {
+      height: 40px;
+      width: 40px;
+    }
+  }
+
+  .content {
+    padding-left: 50px;
+    color: #333;
+    display: block;
+  }
+
+  .title, .artist {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+
+  .title {
+    font-weight: bold;
+  }
+
+  .tiny-progress {
+    height: 4px;
+    position:  relative;
+
+    .tiny-progress-bar {
+      background: $brand-primary;
+      height: 4px;
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      bottom: 0px;
+    }
+  }
+
+  .tiny-episode {
+    margin: 0px;
+
+    .thumb {
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,34 @@
+<div class="card">
+  <div class="card-cover">
+    {{play-button action="playPause" playing=playing}}
+    {{cover-image image=episode.cover}}
+  </div>
+  <div class="card-body padded">
+    {{#link-to "episode" episode}}
+      <h1>{{episode.title}}</h1>
+    {{/link-to}}
+    {{#link-to "feed" episode.feed}}
+      <h2>{{episode.feed.title}}</h2>
+    {{/link-to}}
+    <div class="badges">
+      <span class="play-count">
+        <span class="glyphicon glyphicon-music"></span>
+        {{episode.listensCount}}
+      </span>
+      <span class="play-count">
+        <span class="glyphicon glyphicon-heart"></span>
+        {{episode.favoritesCount}}
+      </span>
+      <span class="play-count">
+        <span class="glyphicon glyphicon-cloud-upload"></span>
+        {{time-ago episode.published}}
+      </span>
+    </div>
+  </div>
+  <div class="card-actions">
+    {{#link-to "episode" episode class="btn btn-default pull-right"}}
+      <span class="glyphicon glyphicon-link"></span>
+    {{/link-to}}
+    {{fav-button favorited=favorited action="toggleFavorite"}}
+  </div>
+</div>

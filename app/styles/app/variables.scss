@@ -1,0 +1,7 @@
+$icon-font-path: '/assets/boostrap/';
+
+$navbar-default-color:  #777;
+$navbar-default-bg:     #ffffff;
+$navbar-default-border: darken($navbar-default-bg, 6.5%) !default;
+@import "bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/variables";
+$btn-default-border:    $gray-lighter;

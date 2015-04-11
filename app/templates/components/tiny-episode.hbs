@@ -1,0 +1,13 @@
+{{#link-to 'episode' episode.id class='tiny-episode'}}
+  <div class="thumb">
+    <img {{bind-attr src="episode.cover"}}>
+  </div>
+  <div class="content">
+    <div class="title">
+      {{episode.title}}
+    </div>
+    <div class="artist">
+      {{episode.artist}}
+    </div>
+  </div>
+{{/link-to}}

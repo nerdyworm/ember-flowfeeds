@@ -1,0 +1,21 @@
+<div class="container">
+  <div class="row">
+  {{#each controller as |episode|}}
+    <div class="col-xs-12 col-sm-6 col-md-4">
+      {{episode-card
+        user=controller.currentUser
+        player=controller.player
+        episode=episode
+        playTeaser="play"
+        pauseTeaser="pause"
+        toggleFavorite="toggleFavorite"
+      }}
+    </div>
+  {{/each}}
+  </div>
+  <div class="row">
+    <div class="col-xs-12 text-center">
+      {{partial 'newer-older-buttons'}}
+    </div>
+  </div>
+</div>
